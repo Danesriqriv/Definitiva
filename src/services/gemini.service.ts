@@ -5,7 +5,7 @@ import { MASTER_PROMPT } from '../constants';
 
 // Inicialización segura del cliente
 // Se asume que process.env.API_KEY está disponible vía configuración de build o .env
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 export const geminiService = {
   /**
